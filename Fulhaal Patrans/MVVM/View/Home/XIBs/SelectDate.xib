@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Montserrat-Regular.ttf">
+            <string>Montserrat-Regular</string>
+        </array>
+        <array key="Montserrat-SemiBold.ttf">
+            <string>Montserrat-SemiBold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SelectDate" customModule="Fulhaal_Patrans" customModuleProvider="target">
+            <connections>
+                <outlet property="containerView" destination="iN0-l3-epB" id="I8k-Fq-VTh"/>
+                <outlet property="txtFieldDate" destination="sGR-LM-BKx" id="3xT-IO-bKj"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xP7-qz-JUW">
+                    <rect key="frame" x="20" y="240.5" width="335" height="186"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select Date" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fG2-Xa-Q80">
+                            <rect key="frame" x="10" y="40" width="315" height="21"/>
+                            <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Date" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sGR-LM-BKx">
+                            <rect key="frame" x="10" y="71" width="315" height="45"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="45" id="rbf-wb-Wws"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="15"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="caz-al-blE">
+                            <rect key="frame" x="300" y="0.0" width="35" height="35"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="35" id="2zO-ib-Yi7"/>
+                                <constraint firstAttribute="width" constant="35" id="doM-SY-zJC"/>
+                            </constraints>
+                            <inset key="imageEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="10"/>
+                            <state key="normal" image="x-button"/>
+                            <connections>
+                                <action selector="btnCrossAct:" destination="-1" eventType="touchUpInside" id="QE4-qh-sHj"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ogh-2A-vs7">
+                            <rect key="frame" x="10" y="126" width="315" height="50"/>
+                            <color key="backgroundColor" red="0.75686274509999996" green="0.047058823530000002" blue="0.098039215690000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="50" id="FWJ-Eb-8n0"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="15"/>
+                            <state key="normal" title="DONE">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="8"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="btnDoneAct:" destination="-1" eventType="touchUpInside" id="jEj-eY-CTW"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="fG2-Xa-Q80" firstAttribute="centerX" secondItem="xP7-qz-JUW" secondAttribute="centerX" id="0qy-ch-Ydi"/>
+                        <constraint firstAttribute="trailing" secondItem="fG2-Xa-Q80" secondAttribute="trailing" constant="10" id="2m5-kf-Yxb"/>
+                        <constraint firstItem="caz-al-blE" firstAttribute="top" secondItem="xP7-qz-JUW" secondAttribute="top" id="4kc-bk-NHH"/>
+                        <constraint firstItem="Ogh-2A-vs7" firstAttribute="trailing" secondItem="sGR-LM-BKx" secondAttribute="trailing" id="9gI-hB-2hl"/>
+                        <constraint firstItem="sGR-LM-BKx" firstAttribute="top" secondItem="fG2-Xa-Q80" secondAttribute="bottom" constant="10" id="Abg-cl-ZGi"/>
+                        <constraint firstItem="fG2-Xa-Q80" firstAttribute="leading" secondItem="xP7-qz-JUW" secondAttribute="leading" constant="10" id="Dls-kU-JE2"/>
+                        <constraint firstAttribute="trailing" secondItem="caz-al-blE" secondAttribute="trailing" id="ELB-7o-LXa"/>
+                        <constraint firstItem="Ogh-2A-vs7" firstAttribute="leading" secondItem="sGR-LM-BKx" secondAttribute="leading" id="cvg-bv-H7m"/>
+                        <constraint firstItem="sGR-LM-BKx" firstAttribute="trailing" secondItem="fG2-Xa-Q80" secondAttribute="trailing" id="ewD-ml-s0U"/>
+                        <constraint firstItem="fG2-Xa-Q80" firstAttribute="top" secondItem="caz-al-blE" secondAttribute="bottom" constant="5" id="nQc-WE-ICi"/>
+                        <constraint firstItem="sGR-LM-BKx" firstAttribute="leading" secondItem="fG2-Xa-Q80" secondAttribute="leading" id="rfj-Dg-hgS"/>
+                        <constraint firstAttribute="bottom" secondItem="Ogh-2A-vs7" secondAttribute="bottom" constant="10" id="v0v-It-cfQ"/>
+                        <constraint firstItem="Ogh-2A-vs7" firstAttribute="top" secondItem="sGR-LM-BKx" secondAttribute="bottom" constant="10" id="vu4-tP-G3n"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="8"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" white="0.0" alpha="0.5836410017203022" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="xP7-qz-JUW" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" id="8xq-pC-Q7L"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="xP7-qz-JUW" secondAttribute="trailing" constant="20" id="Zl7-Dh-Y2C"/>
+                <constraint firstItem="xP7-qz-JUW" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="a2R-Tn-JFK"/>
+                <constraint firstItem="xP7-qz-JUW" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="e0K-7d-UIw"/>
+            </constraints>
+            <point key="canvasLocation" x="-25" y="73"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="x-button" width="512" height="512"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

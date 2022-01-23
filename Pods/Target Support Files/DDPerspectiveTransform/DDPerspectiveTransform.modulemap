@@ -1,0 +1,6 @@
+framework module DDPerspectiveTransform {
+  umbrella header "DDPerspectiveTransform-umbrella.h"
+
+  export *
+  module * { export * }
+}
